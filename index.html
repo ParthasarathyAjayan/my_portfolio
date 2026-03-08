@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parthasarathy A — AI Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─────────────────────────────── NAV ─────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>PA<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─────────────────────────────── HERO ────────────────────────────── -->
+  <section class="hero" id="home">
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Glowing blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+        <span class="hero-badge-sep">·</span>
+        <span class="hero-badge-loc"><i class="fas fa-map-marker-alt"></i> AI Engineer</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-greeting">Hi, I'm</span>
+        <span class="hero-name">Parthasarathy A<span class="hero-name-cursor"></span></span>
+      </h1>
+
+      <div class="hero-role">
+        <span class="role-prefix">I build&nbsp;</span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor">|</span>
+      </div>
+
+      <p class="hero-summary">
+        AI Engineer with <strong>8+ years</strong> of experience crafting
+        production-grade <strong>Generative AI &amp; LLM-powered systems</strong>.
+        Specialising in RAG pipelines, multi-agent orchestration, semantic search,
+        and enterprise-ready AI deployments.
+      </p>
+
+      <!-- Hero tech pill strip -->
+      <div class="hero-pill-strip">
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fas fa-brain"></i> LLMs</span>
+        <span><i class="fas fa-sitemap"></i> RAG</span>
+        <span><i class="fas fa-project-diagram"></i> LangGraph</span>
+        <span><i class="fab fa-microsoft"></i> Azure AI</span>
+        <span><i class="fas fa-robot"></i> Agents</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Get in Touch
+        </a>
+        <a href="#experience" class="btn btn-secondary">
+          <i class="fas fa-briefcase"></i> View My Work
+        </a>
+        <a href="#certifications" class="btn btn-cert">
+          <i class="fas fa-certificate"></i> View My Certificates
+        </a>
+        <a href="https://github.com/Parthan8131" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+
+      <!-- Quick-stat cards -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-calendar-alt"></i></span>
+          <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-certificate"></i></span>
+          <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-building"></i></span>
+          <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fas fa-rocket"></i></span>
+          <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">AI Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#about" class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ─────────────────────────────── ABOUT ───────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">Who I am</div>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-avatar-wrap reveal">
+
+          <!-- Neural network SVG lines -->
+          <svg class="neural-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- orbiting node connection lines -->
+            <line class="n-line" x1="150" y1="150" x2="150" y2="30"/>
+            <line class="n-line" x1="150" y1="150" x2="258" y2="96"/>
+            <line class="n-line" x1="150" y1="150" x2="258" y2="204"/>
+            <line class="n-line" x1="150" y1="150" x2="150" y2="270"/>
+            <line class="n-line" x1="150" y1="150" x2="42"  y2="204"/>
+            <line class="n-line" x1="150" y1="150" x2="42"  y2="96"/>
+            <!-- node glow halos -->
+            <circle class="n-halo h1" cx="150" cy="30"  r="5"/>
+            <circle class="n-halo h2" cx="258" cy="96"  r="5"/>
+            <circle class="n-halo h3" cx="258" cy="204" r="5"/>
+            <circle class="n-halo h4" cx="150" cy="270" r="5"/>
+            <circle class="n-halo h5" cx="42"  cy="204" r="5"/>
+            <circle class="n-halo h6" cx="42"  cy="96"  r="5"/>
+            <!-- outer ring dots -->
+            <circle class="n-dot pulse-1" cx="150" cy="30"  r="5"/>
+            <circle class="n-dot pulse-2" cx="258" cy="96"  r="5"/>
+            <circle class="n-dot pulse-3" cx="258" cy="204" r="5"/>
+            <circle class="n-dot pulse-1" cx="150" cy="270" r="5"/>
+            <circle class="n-dot pulse-2" cx="42"  cy="204" r="5"/>
+            <circle class="n-dot pulse-3" cx="42"  cy="96"  r="5"/>
+            <!-- mid ring -->
+            <circle class="n-ring-1" cx="150" cy="150" r="110" fill="none"/>
+            <circle class="n-ring-2" cx="150" cy="150" r="80"  fill="none"/>
+          </svg>
+
+          <!-- Scanning line -->
+          <div class="avatar-scan"></div>
+
+          <!-- Glowing halo -->
+          <div class="avatar-halo"></div>
+
+          <!-- Outer dashed orbit -->
+          <div class="avatar-orbit"></div>
+
+          <!-- Core -->
+          <div class="avatar-inner">
+            <div class="avatar-core-glow"></div>
+            <i class="fas fa-brain avatar-icon"></i>
+            <div class="avatar-pulse-ring r1"></div>
+            <div class="avatar-pulse-ring r2"></div>
+            <div class="avatar-pulse-ring r3"></div>
+          </div>
+
+          <!-- Floating tags -->
+          <div class="avatar-tag tag-1"><i class="fab fa-python"></i> Python</div>
+          <div class="avatar-tag tag-2"><i class="fas fa-sitemap"></i> RAG</div>
+          <div class="avatar-tag tag-3"><i class="fas fa-project-diagram"></i> LangGraph</div>
+          <div class="avatar-tag tag-4"><i class="fas fa-robot"></i> Agentic AI</div>
+          <div class="avatar-tag tag-5"><i class="fab fa-microsoft"></i> Azure AI</div>
+          <div class="avatar-tag tag-6"><i class="fas fa-microchip"></i> Gen AI</div>
+          <div class="avatar-tag tag-7"><i class="fas fa-brain"></i> LLM</div>
+
+        </div>
+
+        <div class="about-text reveal">
+          <p>
+            I'm an <strong>AI Engineer</strong> based in <strong>Dubai</strong> with
+            a deep passion for turning cutting-edge research into real-world,
+            production-grade AI solutions. My journey spans 8+ years — from building
+            Python automation frameworks for automotive giants like Ford, to leading
+            GenAI-powered enterprise applications at HARMAN.
+          </p>
+          <p>
+            I specialise in designing production-grade <strong>Retrieval-Augmented Generation (RAG) pipelines</strong>,
+            orchestrating complex <strong>multi-agent architectures</strong>, and engineering
+            intelligent workflows using <strong>LangChain</strong> and <strong>LangGraph</strong>.
+            I seamlessly integrate <strong>LLMs</strong> with cloud-native infrastructure — bridging the gap
+            between deep software engineering foundations and cutting-edge AI to deliver
+            systems that are scalable, observable, and built to last.
+          </p>
+          <p>
+            Expert in the <strong>Azure AI ecosystem</strong> — including
+            <strong>Azure OpenAI</strong>, <strong>Azure AI Search</strong>,
+            <strong>Cosmos DB</strong>, cloud-native GenAI deployment,
+            <strong>fine-tuning</strong>, and all <strong>Azure AI Foundry</strong> services.
+          </p>
+
+          <div class="about-meta">
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dubai, UAE</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-passport"></i>
+              <span>Indian National</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>M.Tech — BITS Pilani (Wipro Academy)</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-language"></i>
+              <span>English · Malayalam · Tamil · Hindi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── SKILLS ──────────────────────────── -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-label">What I know</div>
+      <h2 class="section-title">Technical Skills</h2>
+
+      <!-- Tech-logo marquee strip -->
+      <div class="tech-strip-wrap reveal">
+        <div class="tech-strip">
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fab fa-microsoft"></i> Azure OpenAI</span>
+          <span><i class="fas fa-brain"></i> LangChain</span>
+          <span><i class="fas fa-project-diagram"></i> LangGraph</span>
+          <span><i class="fas fa-cubes"></i> RAG</span>
+          <span><i class="fas fa-bolt"></i> FastAPI</span>
+          <span><i class="fas fa-database"></i> Pinecone</span>
+          <span><i class="fab fa-docker"></i> Docker</span>
+          <span><i class="fas fa-code-branch"></i> CI/CD</span>
+          <span><i class="fas fa-snowflake"></i> Snowflake</span>
+          <span><i class="fas fa-robot"></i> Agentic AI</span>
+          <span><i class="fas fa-search"></i> Vector Search</span>
+          <!-- duplicate for seamless loop -->
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fab fa-microsoft"></i> Azure OpenAI</span>
+          <span><i class="fas fa-brain"></i> LangChain</span>
+          <span><i class="fas fa-project-diagram"></i> LangGraph</span>
+          <span><i class="fas fa-cubes"></i> RAG</span>
+          <span><i class="fas fa-bolt"></i> FastAPI</span>
+          <span><i class="fas fa-database"></i> Pinecone</span>
+          <span><i class="fab fa-docker"></i> Docker</span>
+          <span><i class="fas fa-code-branch"></i> CI/CD</span>
+          <span><i class="fas fa-snowflake"></i> Snowflake</span>
+          <span><i class="fas fa-robot"></i> Agentic AI</span>
+          <span><i class="fas fa-search"></i> Vector Search</span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- CARD 1 — Generative AI -->
+        <div class="skill-card skill-card--ai reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>Generative AI &amp; LLM Engineering</h3>
+                <span class="skill-level-label">Expert · 95%</span>
+              </div>
+              <div class="skill-level-bar" data-level="95"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">11</span>
+          </div>
+          <div class="skill-tags">
+            <span>Generative AI</span><span>LLMs</span><span>RAG</span>
+            <span>LangChain</span><span>Multi-Agent Architectures</span>
+            <span>Agentic AI Systems</span><span>Prompt Engineering</span>
+            <span>LLM Orchestration</span><span>Hallucination Reduction</span>
+            <span>LLM Evaluation &amp; Validation</span><span>Inference Workflows</span>
+          </div>
+        </div>
+
+        <!-- CARD 2 — Programming -->
+        <div class="skill-card skill-card--python reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>Programming &amp; Core Dev</h3>
+                <span class="skill-level-label">Advanced · 90%</span>
+              </div>
+              <div class="skill-level-bar" data-level="90"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">8</span>
+          </div>
+          <div class="skill-tags">
+            <span>Python</span><span>FastAPI</span><span>REST APIs</span>
+            <span>Backend Development</span><span>API Integration</span>
+            <span>Custom Automation Frameworks</span><span>PostgreSQL</span>
+            <span>Angular / React (via Prompt Eng.)</span>
+          </div>
+        </div>
+
+        <!-- CARD 3 — Cloud / Azure -->
+        <div class="skill-card skill-card--cloud reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>Cloud &amp; Azure AI</h3>
+                <span class="skill-level-label">Advanced · 88%</span>
+              </div>
+              <div class="skill-level-bar" data-level="88"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">8</span>
+          </div>
+          <div class="skill-tags">
+            <span>Microsoft Azure</span><span>Azure AI Services</span>
+            <span>Azure AI Foundry / Studio</span><span>Azure OpenAI</span>
+            <span>Azure AI Search</span><span>Cloud-Native AI</span>
+            <span>Azure Tool Calling</span><span>AI-102 (In Progress)</span>
+          </div>
+        </div>
+
+        <!-- CARD 4 — Vector / DB -->
+        <div class="skill-card skill-card--db reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>Vector Search &amp; Databases</h3>
+                <span class="skill-level-label">Advanced · 85%</span>
+              </div>
+              <div class="skill-level-bar" data-level="85"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">9</span>
+          </div>
+          <div class="skill-tags">
+            <span>Vector Databases</span><span>Pinecone</span><span>Cosmos DB</span>
+            <span>Embeddings Generation</span><span>Similarity Search</span>
+            <span>Semantic Search</span><span>Snowflake</span>
+            <span>MongoDB</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <!-- CARD 5 — DevOps -->
+        <div class="skill-card skill-card--devops reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fas fa-infinity"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>DevOps &amp; CI/CD</h3>
+                <span class="skill-level-label">Proficient · 80%</span>
+              </div>
+              <div class="skill-level-bar" data-level="80"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">8</span>
+          </div>
+          <div class="skill-tags">
+            <span>Jenkins</span><span>Docker</span><span>Helm</span>
+            <span>CI/CD Pipelines</span><span>Git</span>
+            <span>Production AI Pipelines</span>
+            <span>ML Lifecycle</span><span>Monitoring</span>
+          </div>
+        </div>
+
+        <!-- CARD 6 — Workflow -->
+        <div class="skill-card skill-card--collab reveal">
+          <div class="skill-card-glint"></div>
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+            <div class="skill-card-meta">
+              <div class="skill-card-title-row">
+                <h3>Workflow &amp; Collaboration</h3>
+                <span class="skill-level-label">Expert · 92%</span>
+              </div>
+              <div class="skill-level-bar" data-level="92"><div class="skill-level-fill"></div></div>
+            </div>
+            <span class="skill-count-badge">6</span>
+          </div>
+          <div class="skill-tags">
+            <span>Agile / Scrum</span><span>Jira</span><span>Confluence</span>
+            <span>Technical Leadership</span><span>Mentoring</span>
+            <span>Client Communication</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── EXPERIENCE ──────────────────────── -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-label">Career Timeline</div>
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="timeline">
+
+        <!-- HARMAN -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tc--harman">
+            <div class="tc-accent-bar"></div>
+
+            <div class="tc-header">
+              <!-- Logo -->
+              <div class="tc-logo-wrap">
+                <img src="logos/Harman_t.png" alt="HARMAN" class="tc-logo">
+              </div>
+              <!-- Title block -->
+              <div class="tc-title-block">
+                <h3 class="timeline-company">HARMAN International</h3>
+                <span class="timeline-role"><i class="fas fa-user-tie"></i> Technical Lead</span>
+                <div class="tc-badges">
+                  <span class="tc-badge tc-badge--domain"><i class="fas fa-microchip"></i> GenAI / Embedded</span>
+                  <span class="tc-badge tc-badge--type"><i class="fas fa-building"></i> Full-time</span>
+                </div>
+              </div>
+              <!-- Meta -->
+              <div class="tc-meta">
+                <span class="tc-date"><i class="fas fa-calendar-alt"></i> Oct 2023 – Aug 2025</span>
+                <span class="tc-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+                <span class="tc-tenure-pill">1 yr 10 mo</span>
+              </div>
+            </div>
+
+            <div class="tc-divider"></div>
+
+            <div class="project-block">
+              <h4><span class="project-num">01</span> Harman BridgeX — Python Backend &amp; GenAI Engineer</h4>
+              <ul>
+                <li>Built production-ready GenAI chat assistant using <strong>FastAPI, LangChain &amp; vector database</strong> — reduced manual pipeline investigation time significantly.</li>
+                <li>Designed <strong>RAG pipelines</strong> with LLM responses integrated with real-time databases (Snowflake, Salesforce, PostgreSQL, MongoDB).</li>
+                <li>Implemented hallucination-reduction mechanisms, monitoring, and evaluation in AI workflow.</li>
+                <li>Engineered prompt structures and output formats to improve answer accuracy.</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4><span class="project-num">02</span> Oracle CNDRA — Test Automation Engineer</h4>
+              <ul>
+                <li>Automated API, Selenium, and end-to-end tests in a <strong>Python BDD framework</strong>.</li>
+                <li>Built Docker images &amp; Helm charts; integrated Jenkins for CI/CD-based testing.</li>
+              </ul>
+            </div>
+
+            <!-- Client logos -->
+            <div class="tc-clients">
+              <span class="tc-clients-label">Client Projects</span>
+              <div class="tc-client-logos">
+                <img src="logos/Oracle_t.png" alt="Oracle" class="tc-client-logo">
+              </div>
+            </div>
+
+            <div class="timeline-tags">
+              <span>GenAI</span><span>RAG</span><span>LangChain</span><span>FastAPI</span>
+              <span>Python</span><span>Docker</span><span>Helm</span><span>Jenkins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAPGEMINI -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tc--capgemini">
+            <div class="tc-accent-bar"></div>
+
+            <div class="tc-header">
+              <div class="tc-logo-wrap">
+                <img src="logos/Capgemini_t.png" alt="Capgemini" class="tc-logo">
+              </div>
+              <div class="tc-title-block">
+                <h3 class="timeline-company">Capgemini Engineering</h3>
+                <span class="timeline-role"><i class="fas fa-user-tie"></i> Professional II Software Engineer Lead</span>
+                <div class="tc-badges">
+                  <span class="tc-badge tc-badge--domain"><i class="fas fa-flask"></i> QA / Automation</span>
+                  <span class="tc-badge tc-badge--type"><i class="fas fa-building"></i> Full-time</span>
+                </div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date"><i class="fas fa-calendar-alt"></i> Jun 2022 – Oct 2023</span>
+                <span class="tc-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+                <span class="tc-tenure-pill">1 yr 4 mo</span>
+              </div>
+            </div>
+
+            <div class="tc-divider"></div>
+
+            <div class="project-block">
+              <h4><span class="project-num">01</span> IBM Spectrum Protect Plus — Automation &amp; Python</h4>
+              <ul>
+                <li>Designed and executed Python automation for data protection applications.</li>
+                <li>Debugged Jenkins CI/CD failures &amp; mentored Capgemini interns on Python &amp; automation best practices.</li>
+                <li>Proficient in Git, RTC, JIRA; strong QA processes understanding.</li>
+              </ul>
+            </div>
+
+            <!-- Client logos -->
+            <div class="tc-clients">
+              <span class="tc-clients-label">Client Projects</span>
+              <div class="tc-client-logos">
+                <img src="logos/IBM_t.png" alt="IBM" class="tc-client-logo">
+              </div>
+            </div>
+
+            <div class="timeline-tags">
+              <span>Python</span><span>Jenkins</span><span>CI/CD</span><span>JIRA</span><span>QA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WIPRO -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tc--wipro">
+            <div class="tc-accent-bar"></div>
+
+            <div class="tc-header">
+              <div class="tc-logo-wrap">
+                <img src="logos/Wipro_t.png" alt="Wipro" class="tc-logo">
+              </div>
+              <div class="tc-title-block">
+                <h3 class="timeline-company">Wipro Technologies</h3>
+                <span class="timeline-role"><i class="fas fa-user-tie"></i> Senior Software Engineer → Student Computer Application</span>
+                <div class="tc-badges">
+                  <span class="tc-badge tc-badge--domain"><i class="fas fa-car"></i> ADAS / Automotive</span>
+                  <span class="tc-badge tc-badge--type"><i class="fas fa-building"></i> Full-time</span>
+                </div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date"><i class="fas fa-calendar-alt"></i> Dec 2016 – Jun 2022</span>
+                <span class="tc-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+                <span class="tc-tenure-pill">5 yr 6 mo</span>
+              </div>
+            </div>
+
+            <div class="tc-divider"></div>
+
+            <div class="project-block">
+              <h4><span class="project-num">01</span> FORD ADAS — Python Developer / Team SPOC / PR Reviewer</h4>
+              <ul>
+                <li>Built Python automation frameworks and custom plugins for ADAS ECU workflows.</li>
+                <li>Automated REST API–based DB operations, test suites, API testing, and ECU flashing.</li>
+                <li>Managed client communication and delivered key project demos in an Agile environment.</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4><span class="project-num">02</span> FORD Cluster — Python Developer / Team SPOC</h4>
+              <ul>
+                <li>Led Python Automation team for script development; managed tasks and guided engineers.</li>
+                <li>Created design documents for POCs; developed automation frameworks per client needs.</li>
+                <li>Delivered knowledge-sharing sessions at team, project, and org levels.</li>
+              </ul>
+            </div>
+
+            <!-- Innovation -->
+            <div class="innovation-block">
+              <div class="innovation-header"><i class="fas fa-lightbulb"></i> Innovation Hackathon Highlights</div>
+              <div class="innovation-items">
+                <div class="innovation-item">
+                  <strong>HPALM Test Auto-Download</strong> — Automated daily suite downloads during server outages, enabling <strong>100+ engineers</strong> to test uninterrupted.
+                </div>
+                <div class="innovation-item">
+                  <strong>ECU Software Auto-Flashing</strong> — Eliminated repetitive manual flashing, saving up to <strong>2 hours per engineer per day</strong>.
+                </div>
+              </div>
+            </div>
+
+            <!-- Client logos -->
+            <div class="tc-clients">
+              <span class="tc-clients-label">Client Projects</span>
+              <div class="tc-client-logos">
+                <img src="logos/Ford_t.png" alt="Ford" class="tc-client-logo">
+              </div>
+            </div>
+
+            <div class="timeline-tags">
+              <span>Python</span><span>REST APIs</span><span>Automation</span>
+              <span>ADAS</span><span>Agile</span><span>GitHub</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── PROJECTS ────────────────────────── -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-label">What I've built</div>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-university"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Parthan8131/Multi-Agent-Bank-Chatbot" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-origin">IIT Madras Capstone Project</div>
+          <h3>Banking Customer Support AI Agent</h3>
+          <p class="project-subtitle">Multi-Agent Architecture with RAG</p>
+          <p class="project-desc">
+            Enterprise-grade intelligent customer support assistant for banking operations. Features
+            <strong>6 specialised agents</strong> — classifier, retriever, responder, escalation,
+            feedback handler, and validator — orchestrated dynamically.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> End-to-end RAG pipeline with Pinecone vector DB &amp; GPT-4o-mini</li>
+            <li><i class="fas fa-check-circle"></i> 1536-dim text embeddings with cosine similarity intent classification</li>
+            <li><i class="fas fa-check-circle"></i> Hallucination reduction &amp; response validation agent</li>
+            <li><i class="fas fa-check-circle"></i> SQLite-based ticketing for low-confidence escalations</li>
+            <li><i class="fas fa-check-circle"></i> Streamlit UI with real-time observability dashboards</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span><span>LangChain</span><span>OpenAI GPT-4o</span>
+            <span>Pinecone</span><span>RAG</span><span>Multi-Agent</span><span>Streamlit</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+          </div>
+          <div class="project-origin">HARMAN · BridgeX Platform</div>
+          <h3>GenAI Pipeline Monitoring Assistant</h3>
+          <p class="project-subtitle">Natural Language Interface for Data Operations</p>
+          <p class="project-desc">
+            Internal GenAI assistant enabling engineers to ask natural language questions
+            about pipeline runs, failures, and system status — dramatically reducing manual
+            investigation time.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Production FastAPI + LangChain + vector DB architecture</li>
+            <li><i class="fas fa-check-circle"></i> Multi-source integration: Snowflake, Salesforce, PostgreSQL, MongoDB</li>
+            <li><i class="fas fa-check-circle"></i> Real-time LLM responses with contextual grounding</li>
+            <li><i class="fas fa-check-circle"></i> Monitoring, evaluation, &amp; hallucination-reduction mechanisms</li>
+          </ul>
+          <div class="project-tech">
+            <span>FastAPI</span><span>LangChain</span><span>Snowflake</span>
+            <span>PostgreSQL</span><span>MongoDB</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-card--featured">
+          <div class="project-card-glow"></div>
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-plane-departure"></i></div>
+            <div class="project-links">
+              <span class="project-badge-new">Azure AI</span>
+            </div>
+          </div>
+          <div class="project-origin">Personal Project · Airline Operations AI</div>
+          <h3>EtiGold AI Travel Operations Copilot</h3>
+          <p class="project-subtitle">LangGraph Multi-Agent · Azure AI · RAG Pipeline</p>
+          <p class="project-desc">
+            Enterprise-grade AI system simulating an airline operations and passenger support copilot,
+            built on <strong>Azure AI services</strong> and <strong>LangGraph multi-agent orchestration</strong>.
+            Full-stack deployment with React frontend, FastAPI gateway, Redis memory, and Cosmos DB.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> LangGraph StateGraph DAG — Supervisor routes to Flight, Booking, Policy &amp; Support agents</li>
+            <li><i class="fas fa-check-circle"></i> Azure AI Search hybrid search (BM25 + ANN vector) with semantic reranking (RRF)</li>
+            <li><i class="fas fa-check-circle"></i> Full RAG pipeline: embed → retrieve → rerank → cite policy IDs in LLM answer</li>
+            <li><i class="fas fa-check-circle"></i> Redis-backed multi-turn conversation memory per session</li>
+            <li><i class="fas fa-check-circle"></i> Azure Cosmos DB (NoSQL serverless) + Blob Storage for live ops data &amp; policy corpus</li>
+            <li><i class="fas fa-check-circle"></i> React + Vite SPA with WebSocket &amp; HTTP chat endpoints via FastAPI</li>
+          </ul>
+          <div class="project-tech">
+            <span>Azure OpenAI</span><span>LangGraph</span><span>Azure AI Search</span>
+            <span>FastAPI</span><span>Cosmos DB</span><span>Redis</span>
+            <span>React</span><span>Python</span><span>RAG</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── CERTIFICATIONS ──────────────────── -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Certifications &amp; Education</h2>
+
+      <div class="cert-edu-grid">
+
+        <!-- ── CERTIFICATIONS COLUMN ── -->
+        <div class="cert-column">
+          <div class="cert-col-header">
+            <span class="cert-col-icon"><i class="fas fa-certificate"></i></span>
+            <h3 class="subsection-title">Certifications</h3>
+            <span class="cert-count-badge">6</span>
+          </div>
+          <div class="cert-list">
+
+            <!-- IIT Madras — FEATURED -->
+            <div class="cert-card cert-card--featured reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo iit"><span>IIT</span></div>
+              <div class="cert-info">
+                <h4>Advanced Executive Program in Applied Generative AI</h4>
+                <span class="cert-org"><i class="fas fa-university"></i> IIT Madras</span>
+                <span class="cert-date"><i class="fas fa-calendar-check"></i> Completed Jan 2026</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-elite"><i class="fas fa-star"></i> Elite</span>
+                <div class="cert-badge completed"><i class="fas fa-check"></i> Completed</div>
+              </div>
+              <div class="cert-shimmer"></div>
+            </div>
+
+            <!-- AI-102 In Progress — FEATURED -->
+            <div class="cert-card cert-card--inprogress reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo ms inprogress"><i class="fab fa-microsoft"></i></div>
+              <div class="cert-info">
+                <h4>AI-102 – Azure AI Engineer Associate</h4>
+                <span class="cert-org"><i class="fab fa-microsoft"></i> Microsoft</span>
+                <span class="cert-date"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-advanced"><i class="fas fa-trophy"></i> Associate</span>
+                <div class="cert-badge inprogress"><i class="fas fa-hourglass-half"></i> In Progress</div>
+              </div>
+              <div class="cert-shimmer"></div>
+            </div>
+
+            <!-- IBM -->
+            <div class="cert-card reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo ibm"><span>IBM</span></div>
+              <div class="cert-info">
+                <h4>Building Generative AI-Powered Applications with Python</h4>
+                <span class="cert-org"><i class="fas fa-building"></i> IBM</span>
+                <span class="cert-date"><i class="fas fa-calendar-check"></i> Completed Aug 2025</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-professional">Professional</span>
+                <div class="cert-badge completed"><i class="fas fa-check"></i> Completed</div>
+              </div>
+            </div>
+
+            <!-- Microsoft Develop AI Solutions -->
+            <div class="cert-card reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo ms"><i class="fab fa-microsoft"></i></div>
+              <div class="cert-info">
+                <h4>Develop AI Solutions in Azure</h4>
+                <span class="cert-org"><i class="fab fa-microsoft"></i> Microsoft Learn</span>
+                <span class="cert-date"><i class="fas fa-calendar-check"></i> Completed Jul 2025</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-course">Course</span>
+                <div class="cert-badge completed"><i class="fas fa-check"></i> Completed</div>
+              </div>
+            </div>
+
+            <!-- Microsoft Copilot -->
+            <div class="cert-card reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo ms"><i class="fab fa-microsoft"></i></div>
+              <div class="cert-info">
+                <h4>Copilot Foundations</h4>
+                <span class="cert-org"><i class="fab fa-microsoft"></i> Microsoft</span>
+                <span class="cert-date"><i class="fas fa-calendar-check"></i> Completed Dec 2025</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-course">Course</span>
+                <div class="cert-badge completed"><i class="fas fa-check"></i> Completed</div>
+              </div>
+            </div>
+
+            <!-- Whizlabs -->
+            <div class="cert-card reveal">
+              <div class="cert-accent-bar"></div>
+              <div class="cert-logo whiz"><span>WZ</span></div>
+              <div class="cert-info">
+                <h4>Selenium WebDriver with Python</h4>
+                <span class="cert-org"><i class="fas fa-building"></i> Whizlabs</span>
+                <span class="cert-date"><i class="fas fa-calendar-check"></i> Completed Aug 2025</span>
+              </div>
+              <div class="cert-right">
+                <span class="cert-tier tier-professional">Professional</span>
+                <div class="cert-badge completed"><i class="fas fa-check"></i> Completed</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── EDUCATION + PROFICIENCIES COLUMN ── -->
+        <div class="edu-column">
+          <div class="cert-col-header">
+            <span class="cert-col-icon"><i class="fas fa-graduation-cap"></i></span>
+            <h3 class="subsection-title">Education</h3>
+          </div>
+
+          <div class="edu-timeline">
+
+            <div class="edu-card reveal">
+              <div class="edu-timeline-dot"></div>
+              <div class="edu-card-inner">
+                <div class="edu-top-row">
+                  <div class="edu-degree-icon-lg"><i class="fas fa-university"></i></div>
+                  <div class="edu-top-text">
+                    <span class="edu-degree-label">Master of Technology</span>
+                    <h4>Software Engineering</h4>
+                    <span class="edu-org"><i class="fas fa-map-marker-alt"></i> BITS Pilani — Wipro Academy of Software Excellence</span>
+                  </div>
+                  <span class="edu-year-badge">2021</span>
+                </div>
+                <div class="edu-meta-row">
+                  <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> Jan 2021</span>
+                  <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Rajasthan, India</span>
+                  <span class="edu-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <div class="edu-highlights">
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> Advanced Software Architecture &amp; Design Patterns</div>
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> Distributed Systems &amp; Cloud Computing</div>
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> AI/ML Foundations &amp; Data Engineering</div>
+                </div>
+                <div class="edu-tags-row">
+                  <span class="edu-tag edu-tag--tier">Tier 1</span>
+                  <span class="edu-tag edu-tag--type">M.Tech</span>
+                  <span class="edu-tag edu-tag--mode">Work-Integrated</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card reveal">
+              <div class="edu-timeline-dot edu-timeline-dot--2"></div>
+              <div class="edu-card-inner">
+                <div class="edu-top-row">
+                  <div class="edu-degree-icon-lg edu-degree-icon-lg--2"><i class="fas fa-graduation-cap"></i></div>
+                  <div class="edu-top-text">
+                    <span class="edu-degree-label">Bachelor of Science</span>
+                    <h4>Computer Science</h4>
+                    <span class="edu-org"><i class="fas fa-map-marker-alt"></i> Kerala University</span>
+                  </div>
+                  <span class="edu-year-badge edu-year-badge--2">2016</span>
+                </div>
+                <div class="edu-meta-row">
+                  <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> Apr 2016</span>
+                  <span class="edu-meta-item"><i class="fas fa-map-marker-alt"></i> Kerala, India</span>
+                  <span class="edu-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <div class="edu-highlights">
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> Data Structures, Algorithms &amp; OOP</div>
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> Database Management &amp; Networking</div>
+                  <div class="edu-highlight-item"><i class="fas fa-check-circle"></i> Software Development &amp; Systems Programming</div>
+                </div>
+                <div class="edu-tags-row">
+                  <span class="edu-tag edu-tag--type">B.Sc</span>
+                  <span class="edu-tag edu-tag--mode">Computer Science</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── CONTACT ─────────────────────────── -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-label">Let's Talk</div>
+      <h2 class="section-title">Get In Touch</h2>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            I'm currently open to new opportunities in AI Engineering, GenAI
+            architecture, and cloud-native AI deployments. Whether you have a
+            question, a project idea, or just want to connect — my inbox is always open.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:Sarathy8131@gmail.com" class="contact-link">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">Sarathy8131@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+971527306115" class="contact-link">
+              <div class="contact-link-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="contact-link-label">Phone / WhatsApp</span>
+                <span class="contact-link-value">+971 52 730 6115</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/parthasarathy-plr" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">parthasarathy-plr</span>
+              </div>
+            </a>
+            <a href="https://github.com/Parthan8131" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">Parthan8131</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Opportunity / Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── FOOTER ──────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>PA<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p>Designed &amp; built by <strong>Parthasarathy A</strong> · 2026</p>
+      <div class="footer-social">
+        <a href="mailto:Sarathy8131@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/parthasarathy-plr" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Parthan8131" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
