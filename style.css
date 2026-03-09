@@ -1528,9 +1528,12 @@ body {
   .about-meta { grid-template-columns: 1fr; }
   .about-avatar-wrap { margin-bottom: 2rem; }
   .cert-edu-grid { grid-template-columns: 1fr; }
-  .tc-header { flex-wrap: wrap; }
-  .tc-meta { align-items: flex-start; }
+  .tc-header { flex-wrap: wrap; gap: 0.9rem; }
+  .tc-logo-wrap { width: 80px; height: 54px; }
+  .tc-title-block { flex: 1; min-width: 0; }
+  .tc-meta { width: 100%; align-items: flex-start; padding-top: 0; }
   .tc-date, .tc-location { justify-content: flex-start; }
+  .timeline-company { font-size: 1rem; white-space: normal; word-break: break-word; }
 }
 
 @media (max-width: 640px) {
