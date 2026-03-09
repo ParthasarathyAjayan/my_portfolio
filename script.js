@@ -100,7 +100,6 @@ const phrases = [
   'RAG Pipelines & LLM Workflows',
   'Multi-Agent Architectures',
   'Semantic Search Solutions',
-  'Python Automation Frameworks',
   'Cloud-Native GenAI Apps'
 ];
 
