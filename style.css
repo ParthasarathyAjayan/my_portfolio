@@ -1528,12 +1528,20 @@ body {
   .about-meta { grid-template-columns: 1fr; }
   .about-avatar-wrap { margin-bottom: 2rem; }
   .cert-edu-grid { grid-template-columns: 1fr; }
-  .tc-header { flex-wrap: wrap; gap: 0.9rem; }
-  .tc-logo-wrap { width: 80px; height: 54px; }
-  .tc-title-block { flex: 1; min-width: 0; }
-  .tc-meta { width: 100%; align-items: flex-start; padding-top: 0; }
+  .tc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.2rem 1.2rem 1rem;
+  }
+  .tc-logo-wrap { width: 80px; height: 52px; }
+  .tc-title-block { width: 100%; min-width: 0; }
+  .timeline-company { font-size: 1.05rem; white-space: normal; word-break: break-word; }
+  .timeline-role { font-size: 0.82rem; }
+  .tc-badges { flex-wrap: wrap; }
+  .tc-meta { width: 100%; align-items: flex-start; padding-top: 0; flex-direction: row; flex-wrap: wrap; gap: 6px; }
   .tc-date, .tc-location { justify-content: flex-start; }
-  .timeline-company { font-size: 1rem; white-space: normal; word-break: break-word; }
+  .tc-tenure-pill { margin-left: auto; }
 }
 
 @media (max-width: 640px) {
