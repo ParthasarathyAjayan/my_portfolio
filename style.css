@@ -1448,10 +1448,11 @@ body {
    CONTACT
    =================================================================== */
 .contact-grid {
-  display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: start;
+  display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start;
+  max-width: 600px; margin: 0 auto;
 }
 .contact-intro { color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem; line-height: 1.8; }
-.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .contact-link {
   display: flex; align-items: center; gap: 1rem;
   background: var(--bg-card); border: 1px solid var(--border);
@@ -1527,7 +1528,6 @@ body {
   .about-meta { grid-template-columns: 1fr; }
   .about-avatar-wrap { margin-bottom: 2rem; }
   .cert-edu-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
   .tc-header { flex-wrap: wrap; }
   .tc-meta { align-items: flex-start; }
   .tc-date, .tc-location { justify-content: flex-start; }
@@ -1542,11 +1542,31 @@ body {
   .nav-links.open { display: flex; }
   .hamburger { display: flex; }
   .projects-grid, .skills-grid { grid-template-columns: 1fr; }
+  .contact-links { grid-template-columns: 1fr; }
   .hero-stats { gap: 0.8rem; }
   .stat-card { min-width: 110px; padding: 1rem 1.2rem; }
   .hero-actions { flex-direction: column; align-items: center; }
   .section { padding: 70px 0; }
   .footer-inner { flex-direction: column; text-align: center; }
+
+  /* Hero name: bigger, fully visible on mobile */
+  .hero-name {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    letter-spacing: -1px;
+    background: linear-gradient(
+      110deg,
+      #ffffff 0%,
+      #00d4ff 28%,
+      #ffffff 50%,
+      #a78bfa 72%,
+      #ffffff 100%
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 12px rgba(0,212,255,0.4));
+  }
 }
 
 /* ── Loading bar on top ── */
