@@ -700,7 +700,7 @@ body {
 
 /* ── Skills grid ────────────────────────────────────────────────────── */
 .skills-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1.5rem;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1.5rem;
 }
 
 /* ── Card glint animation ───────────────────────────────────────────── */
@@ -816,13 +816,14 @@ body {
 }
 
 /* ── Skill tags ─────────────────────────────────────────────────────── */
-.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .skill-tags span {
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--border);
-  border-radius: 50px; padding: 4px 12px;
-  font-size: 0.76rem; color: var(--text-secondary);
+  border-radius: 50px; padding: 3px 10px;
+  font-size: 0.72rem; color: var(--text-secondary);
   transition: all var(--transition);
+  white-space: nowrap;
 }
 .skill-card:hover .skill-tags span {
   border-color: color-mix(in srgb, var(--c) 25%, transparent);
